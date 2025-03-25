@@ -40,7 +40,7 @@ export default function Navlinks({ user }: NavlinksProps) {
           )}
         </nav>
       </div>
-      <div className="flex justify-end space-x-8">
+      <div className="flex items-center space-x-4">
         {user ? (
           <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
             <input type="hidden" name="pathName" value={typeof window !== 'undefined' ? window.location.pathname : '/'} />
@@ -53,11 +53,8 @@ export default function Navlinks({ user }: NavlinksProps) {
             Sign In
           </Link>
         )}
+        <LanguageSwitcher />
       </div>
-      <div className="flex justify-end space-x-8">
-      <LanguageSwitcher />
-      </div>
-      
     </div>
   );
 }
