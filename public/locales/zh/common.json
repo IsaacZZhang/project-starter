@@ -1,7 +1,81 @@
 {
-    "c": "c",
-    "language": {
-        "english": "English",
-        "chinese": "中文"
-      }
+  "c": "c",
+  "language": {
+    "english": "English",
+    "chinese": "中文"
+  },
+  "navbar": {
+    "workspace": "工作区",
+    "docs": "文档",
+    "pricing": "价格",
+    "about": "关于",
+    "account": "账户",
+    "signIn": "登录",
+    "signOut": "退出登录"
+  },
+  "footer": {
+    "home": "首页",
+    "about": "关于",
+    "careers": "招聘",
+    "blog": "博客",
+    "legal": "法律",
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "使用条款",
+    "copyright": "© {{year}} ACME, Inc. 保留所有权利。",
+    "craftedBy": "制作者"
+  },
+  "features": {
+    "title": "最好的数学和科学OCR软件",
+    "subtitle": "图像到LaTeX转换器，具有专为研究论文等科学文档开发的高精度OCR功能",
+    "simplemath": {
+      "title": "简单数学",
+      "description": "简单数学"
+    },
+    "complexmath": {
+      "title": "复杂数学",
+      "description": "复杂数学"
+    },
+    "handwrittenmath": {
+      "title": "手写数学",
+      "description": "手写数学"
+    }
+  },
+  "testimonials": {
+    "title": "最好的数学和科学OCR软件",
+    "subtitle": "图像到LaTeX转换器，具有专为研究论文等科学文档开发的高精度OCR功能",
+    "testimonial1": {
+      "quote": "一段精彩的赞誉",
+      "name": "姓名",
+      "description": "描述"
+    },
+    "testimonial2": {
+      "quote": "一段出色的反馈",
+      "name": "姓名",
+      "description": "描述"
+    },
+    "testimonial3": {
+      "quote": "一段真诚的评价",
+      "name": "姓名",
+      "description": "描述"
+    }
+  },
+  "pricing": {
+    "noPlans": "未找到订阅价格计划。请在您的",
+    "stripeLink": "Stripe控制面板",
+    "billingInterval": {
+      "month": "月付",
+      "year": "年付",
+      "lifetime": "终身"
+    },
+    "perMonth": "/月",
+    "perYear": "/年",
+    "oneTime": "一次性付款",
+    "subscribe": "订阅",
+    "currentPlan": "您当前的计划",
+    "contactUs": "联系我们",
+    "manageSubscription": "管理订阅"
+  },
+  "logocloud": {
+    "broughtToYouBy": "技术支持"
+  }
 }

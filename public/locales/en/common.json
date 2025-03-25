@@ -1,7 +1,81 @@
 {
-    "c": "c",
-    "language": {
-        "english": "English",
-        "chinese": "中文"
-      }
+  "c": "c",
+  "language": {
+    "english": "English",
+    "chinese": "中文"
+  },
+  "navbar": {
+    "workspace": "Workspace",
+    "docs": "Docs",
+    "pricing": "Pricing",
+    "about": "About",
+    "account": "Account",
+    "signIn": "Sign In",
+    "signOut": "Sign out"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "About",
+    "careers": "Careers",
+    "blog": "Blog",
+    "legal": "LEGAL",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "copyright": "© {{year}} ACME, Inc. All rights reserved.",
+    "craftedBy": "Crafted by"
+  },
+  "features": {
+    "title": "The best OCR software for math and science",
+    "subtitle": "Image to LaTeX converter with high-accuracy OCR features developed specifically for scientific documents like research papers",
+    "simplemath": {
+      "title": "Simple Math",
+      "description": "Simple Math"
+    },
+    "complexmath": {
+      "title": "Complex Math",
+      "description": "Complex Math"
+    },
+    "handwrittenmath": {
+      "title": "Handwritten Math",
+      "description": "Handwritten Math"
+    }
+  },
+  "testimonials": {
+    "title": "The best OCR software for math and science",
+    "subtitle": "Image to LaTeX converter with high-accuracy OCR features developed specifically for scientific documents like research papers",
+    "testimonial1": {
+      "quote": "A terrific piece of praise",
+      "name": "Name",
+      "description": "Description"
+    },
+    "testimonial2": {
+      "quote": "A fantastic bit of feedback",
+      "name": "Name",
+      "description": "Description"
+    },
+    "testimonial3": {
+      "quote": "A genuinely glowing review",
+      "name": "Name",
+      "description": "Description"
+    }
+  },
+  "pricing": {
+    "noPlans": "No subscription pricing plans found. Create them in your",
+    "stripeLink": "Stripe Dashboard",
+    "billingInterval": {
+      "month": "Monthly",
+      "year": "Yearly",
+      "lifetime": "Lifetime"
+    },
+    "perMonth": "/month",
+    "perYear": "/year",
+    "oneTime": "One-time payment",
+    "subscribe": "Subscribe",
+    "currentPlan": "Your current plan",
+    "contactUs": "Contact us",
+    "manageSubscription": "Manage Subscription"
+  },
+  "logocloud": {
+    "broughtToYouBy": "Brought to you by"
+  }
 }

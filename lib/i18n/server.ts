@@ -5,8 +5,6 @@ import { Locale } from '@/lib/i18n/types/i18n';
 export async function getServerTranslations(locale: Locale, namespaces: string[]) {
   const translations: Record<string, any> = {};
 
-  console.log('Loading server translations for:', { locale, namespaces });
-
   for (const namespace of namespaces) {
     try {
       const filePath = path.join(process.cwd(), 'public', 'locales', locale, `${namespace}.json`);
@@ -15,9 +13,6 @@ export async function getServerTranslations(locale: Locale, namespaces: string[]
       const content = await fs.readFile(filePath, 'utf-8');
       const parsedContent = JSON.parse(content);
       translations[namespace] = parsedContent;
-      
-      // Log the full structure of loaded translations
-      console.log(`Full ${namespace} translations structure:`, JSON.stringify(translations[namespace], null, 2));
     } catch (error) {
       console.error(`Failed to load translations for ${locale}/${namespace}:`, error);
       translations[namespace] = {};
@@ -31,9 +26,6 @@ export async function getServerTranslations(locale: Locale, namespaces: string[]
       return '';
     }
 
-    // Log the translation lookup attempt
-    console.log('Translation lookup:', { key, params });
-    
     // 遍历所有命名空间
     for (const namespace of namespaces) {
       const namespaceData = translations[namespace];

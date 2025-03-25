@@ -1,23 +1,25 @@
 'use client';
 
+import { useLocale } from '@/lib/i18n/client';
+
 export default function Testimonials() {
+  const { t } = useLocale();
   return (
     <section className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-extrabold text-black sm:text-4xl">
-            The best OCR software for math and science
+            {t('testimonials.title')}
           </h2>
           <p className="mt-4 text-lg text-zinc-900 max-w-3xl mx-auto">
-            Image to LaTeX converter with high-accuracy OCR features developed
-            specifically for scientific documents like research papers
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
           {/* Testimonial 1 */}
           <div className="bg-zinc-300 rounded-lg p-6 shadow-lg">
-            <p className="text-lg text-black mb-4">"A terrific piece of praise"</p>
+            <p className="text-lg text-black mb-4">"{t('testimonials.testimonial1.quote')}"</p>
             <div className="flex items-center">
               <div className="h-10 w-10 rounded-full bg-pink-500 flex items-center justify-center text-white font-bold mr-3">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -25,15 +27,15 @@ export default function Testimonials() {
                 </svg>
               </div>
               <div>
-                <p className="font-medium text-gray-900">Name</p>
-                <p className="text-sm text-gray-500">Description</p>
+                <p className="font-medium text-gray-900">{t('testimonials.testimonial1.name')}</p>
+                <p className="text-sm text-gray-500">{t('testimonials.testimonial1.description')}</p>
               </div>
             </div>
           </div>
 
           {/* Testimonial 2 */}
           <div className="bg-zinc-300 rounded-lg p-6 shadow-lg">
-            <p className="text-lg text-black mb-4">"A fantastic bit of feedback"</p>
+            <p className="text-lg text-black mb-4">"{t('testimonials.testimonial2.quote')}"</p>
             <div className="flex items-center">
               <div className="h-10 w-10 rounded-full bg-pink-500 flex items-center justify-center text-white font-bold mr-3">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -41,15 +43,15 @@ export default function Testimonials() {
                 </svg>
               </div>
               <div>
-                <p className="font-medium text-gray-900">Name</p>
-                <p className="text-sm text-gray-500">Description</p>
+                <p className="font-medium text-gray-900">{t('testimonials.testimonial2.name')}</p>
+                <p className="text-sm text-gray-500">{t('testimonials.testimonial2.description')}</p>
               </div>
             </div>
           </div>
 
           {/* Testimonial 3 */}
           <div className="bg-zinc-300 rounded-lg p-6 shadow-lg">
-            <p className="text-lg text-black mb-4">"A genuinely glowing review"</p>
+            <p className="text-lg text-black mb-4">"{t('testimonials.testimonial3.quote')}"</p>
             <div className="flex items-center">
               <div className="h-10 w-10 rounded-full bg-pink-500 flex items-center justify-center text-white font-bold mr-3">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -57,8 +59,8 @@ export default function Testimonials() {
                 </svg>
               </div>
               <div>
-                <p className="font-medium text-gray-900">Name</p>
-                <p className="text-sm text-gray-500">Description</p>
+                <p className="font-medium text-gray-900">{t('testimonials.testimonial3.name')}</p>
+                <p className="text-sm text-gray-500">{t('testimonials.testimonial3.description')}</p>
               </div>
             </div>
           </div>

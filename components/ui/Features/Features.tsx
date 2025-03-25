@@ -1,16 +1,18 @@
 'use client';
 
+import { useLocale } from '@/lib/i18n/client';
+
 export default function Features() {
+  const { t } = useLocale();
   return (
     <section className="bg-gray-100 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-extrabold text-zinc-800 sm:text-4xl">
-            The best OCR software for math and science
+            {t('features.title')}
           </h2>
           <p className="mt-4 text-lg text-zinc-600 max-w-3xl mx-auto">
-            Image to LaTeX converter with high-accuracy OCR features developed
-            specifically for scientific documents like research papers
+            {t('features.subtitle')}
           </p>
         </div>
 
@@ -18,9 +20,9 @@ export default function Features() {
           {/* Feature Card 1 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-zinc-800">Simple Math</h3>
+              <h3 className="text-xl font-semibold text-zinc-800">{t('features.simplemath.title')}</h3>
               <p className="mt-2 text-zinc-600">
-              Simple Math
+                {t('features.simplemath.description')}
               </p>
             </div>
             <div className="p-1">
@@ -35,9 +37,9 @@ export default function Features() {
           {/* Feature Card 2 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-zinc-800">Complex Math</h3>
+              <h3 className="text-xl font-semibold text-zinc-800">{t('features.complexmath.title')}</h3>
               <p className="mt-2 text-zinc-600">
-              Complex Math
+                {t('features.complexmath.description')}
               </p>
             </div>
             <div className="p-1">
@@ -52,9 +54,9 @@ export default function Features() {
           {/* Feature Card 3 */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-zinc-800">Handwritten Math</h3>
+              <h3 className="text-xl font-semibold text-zinc-800">{t('features.handwrittenmath.title')}</h3>
               <p className="mt-2 text-zinc-600">
-              Handwritten Math
+                {t('features.handwrittenmath.description')}
               </p>
             </div>
             <div className="p-1">
