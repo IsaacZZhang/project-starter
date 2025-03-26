@@ -7,15 +7,39 @@ export async function getServerTranslations(locale: Locale, namespaces: string[]
 
   for (const namespace of namespaces) {
     try {
-      // 使用绝对路径，确保在Vercel环境中能正确找到文件
+      // 首先尝试使用绝对路径读取文件
       const filePath = path.join(process.cwd(), 'public', 'locales', locale, `${namespace}.json`);
-      console.log('Reading translation file:', filePath);
+      console.log('Attempting to read translation file:', filePath);
       
-      const content = await fs.readFile(filePath, 'utf-8');
-      const parsedContent = JSON.parse(content);
-      translations[namespace] = parsedContent;
+      try {
+        // 尝试使用fs.readFile读取文件
+        const content = await fs.readFile(filePath, 'utf-8');
+        const parsedContent = JSON.parse(content);
+        translations[namespace] = parsedContent;
+        console.log(`Successfully loaded translations for ${locale}/${namespace} using fs.readFile`);
+      } catch (fsError) {
+        console.warn(`fs.readFile failed for ${locale}/${namespace}, trying fetch API:`, fsError);
+        
+        // 如果fs.readFile失败，尝试使用fetch API
+        // 构建相对URL路径
+        const relativePath = `/locales/${locale}/${namespace}.json`;
+        console.log('Attempting to fetch translation file from:', relativePath);
+        
+        // 在服务器端使用fetch API
+        // 注意：这需要一个完整的URL，在服务器端运行时可能需要调整
+        const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+        const response = await fetch(`${baseUrl}${relativePath}`);
+        
+        if (!response.ok) {
+          throw new Error(`Fetch failed with status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        translations[namespace] = data;
+        console.log(`Successfully loaded translations for ${locale}/${namespace} using fetch API`);
+      }
     } catch (error) {
-      console.error(`Failed to load translations for ${locale}/${namespace}:`, error);
+      console.error(`All attempts to load translations for ${locale}/${namespace} failed:`, error);
       translations[namespace] = {};
     }
   }
