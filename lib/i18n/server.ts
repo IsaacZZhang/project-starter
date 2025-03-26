@@ -7,7 +7,7 @@ export async function getServerTranslations(locale: Locale, namespaces: string[]
 
   for (const namespace of namespaces) {
     try {
-      const filePath = path.join(process.cwd(), 'public', 'locales', locale, `${namespace}.json`);
+      const filePath = path.join('public', 'locales', locale, `${namespace}.json`);
       console.log('Reading translation file:', filePath);
       
       const content = await fs.readFile(filePath, 'utf-8');

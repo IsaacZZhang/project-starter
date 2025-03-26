@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useLocale } from '@/lib/i18n/client';
 import { Locale } from '@/lib/i18n/types/i18n';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Globe } from 'lucide-react';
 
 const LANGUAGES: Record<Locale, string> = {
@@ -15,6 +15,7 @@ export default function LanguageSwitcher() {
   const { locale, setLocale, t } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -34,7 +35,8 @@ export default function LanguageSwitcher() {
       newPath = `/${newLocale}${pathname}`;
     }
     
-    window.location.href = newPath;
+    // 使用Next.js的router.push进行客户端导航，避免页面完全刷新
+    router.push(newPath);
   };
   
   return (

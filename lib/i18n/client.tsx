@@ -139,9 +139,8 @@ export function LocaleProvider({
 
   const handleSetLocale = (newLocale: Locale) => {
     setLocale(newLocale);
-    // 更新 URL 中的语言参数
-    const newPath = window.location.pathname.replace(/^\/[^/]+/, `/${newLocale}`);
-    window.location.href = newPath;
+    // 不再使用window.location.href进行重定向，而是由调用组件负责导航
+    // 这样可以避免页面完全刷新，减少闪烁问题
   };
 
   return (
@@ -157,4 +156,4 @@ export function useLocale() {
     throw new Error('useLocale must be used within a LocaleProvider');
   }
   return context;
-} 
+}

@@ -1,7 +1,9 @@
 {
-  "title": "Mathpix Snip: Convert Images to LaTeX",
-  "subtitle": "Handily convert images of math, text, and tables to LaTeX with Mathpix Snip.",
-  "feature1": "Works flawlessly on math, text, and tables",
-  "feature2": "Convert both printed and handwritten images",
-  "getStarted": "Get Started"
+  "hero":{
+    "title": "Mathpix Snip: Convert Images to LaTeX",
+    "subtitle": "Handily convert images of math, text, and tables to LaTeX with Mathpix Snip.",
+    "feature1": "Works flawlessly on math, text, and tables",
+    "feature2": "Convert both printed and handwritten images",
+    "getStarted": "Get Started"
+  }
 }
