@@ -7,7 +7,8 @@ export async function getServerTranslations(locale: Locale, namespaces: string[]
 
   for (const namespace of namespaces) {
     try {
-      const filePath = path.join('public', 'locales', locale, `${namespace}.json`);
+      // 使用绝对路径，确保在Vercel环境中能正确找到文件
+      const filePath = path.join(process.cwd(), 'public', 'locales', locale, `${namespace}.json`);
       console.log('Reading translation file:', filePath);
       
       const content = await fs.readFile(filePath, 'utf-8');
