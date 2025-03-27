@@ -57,9 +57,8 @@ export default function PasswordSignIn({
             />
           </div>
           <Button
-            variant="slim"
+            variant={'outline'}
             type="submit"
-            className="mt-1"
             loading={isSubmitting}
           >
             Sign in

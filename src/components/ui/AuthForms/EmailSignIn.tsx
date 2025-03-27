@@ -50,9 +50,8 @@ export default function EmailSignIn({
             />
           </div>
           <Button
-            variant="slim"
+            variant={'outline'}
             type="submit"
-            className="mt-1"
             loading={isSubmitting}
             disabled={disableButton}
           >

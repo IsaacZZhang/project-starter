@@ -33,9 +33,8 @@ export default function Hero() {
             </ul>
             <div className="mt-8">
               <Button
-                variant="slim"
+                variant={'outline'}
                 type="button"
-                className="px-8 py-3 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-700"
               >
                 {t('hero.getStarted')}
               </Button>
